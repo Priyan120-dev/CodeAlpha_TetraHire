@@ -24,7 +24,10 @@ const app = express();
 
 // Security Middlewares
 app.use(helmet({ contentSecurityPolicy: false }));
-app.use(cors());
+app.use(cors({
+  origin: process.env.FRONTEND_URL ? process.env.FRONTEND_URL.split(',') : '*',
+  credentials: true
+}));
 
 // Logging Middleware
 app.use(morgan('dev'));
