@@ -1,0 +1,30 @@
+{
+  "short_name": "TetraHire",
+  "name": "TetraHire Smart Recruitment Portal",
+  "description": "Smart Hiring Starts Here. A complete production-ready full-stack job board platform.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512",
+      "purpose": "any"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0D2149",
+  "theme_color": "#00BE9B",
+  "display": "standalone",
+  "orientation": "portrait"
+}
