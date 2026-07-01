@@ -12,6 +12,9 @@ const connectDB = async () => {
     process.exit(1);
   }
 
+  // Disable command buffering globally so that queries fail instantly with a clean error when disconnected
+  mongoose.set('bufferCommands', false);
+
   try {
     const conn = await mongoose.connect(mongoURI, {
       serverSelectionTimeoutMS: 10000,
@@ -24,7 +27,7 @@ const connectDB = async () => {
   } catch (error) {
     logger.error(`Database connection error: ${error.message}`);
     console.error(`❌ MongoDB connection failed: ${error.message}`);
-    // process.exit(1);
+    process.exit(1);
   }
 };
 

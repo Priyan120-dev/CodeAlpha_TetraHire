@@ -38,9 +38,14 @@ api.defaults.adapter = async (config) => {
   try {
     return await xhrAdapter(config);
   } catch (error) {
-    // If server is offline or connection is refused, auto-switch to sandbox mode
-    if (error.code === 'ERR_NETWORK' || !error.response) {
-      console.warn('[Network Alert] Express backend is unreachable. Activating local Demo Sandbox Mode.');
+    // If server is offline, connection is refused, or database connection times out/fails, auto-switch to sandbox mode
+    const isDbTimeout = error.response?.status === 500 && (
+      error.response?.data?.message?.includes('buffering timed out') ||
+      error.response?.data?.message?.includes('connection failed') ||
+      error.response?.data?.message?.includes('Mongo')
+    );
+    if (error.code === 'ERR_NETWORK' || !error.response || isDbTimeout) {
+      console.warn('[Network/DB Alert] Express backend database is unreachable. Activating local Demo Sandbox Mode.');
       localStorage.setItem('th_demo_mode', 'true');
       window.dispatchEvent(new Event('storage')); // Broadcast state change to Navbar/UI
       

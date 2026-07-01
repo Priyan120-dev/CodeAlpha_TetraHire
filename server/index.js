@@ -33,8 +33,7 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Database connection
-connectDB();
+// Database connection (loaded asynchronously before server starts)
 
 // API Documentation (Swagger)
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
@@ -93,14 +92,26 @@ app.use((req, res, next) => {
 // Global Error Handler
 app.use(errorHandler);
 
-// Initialize Background Scheduler (expired jobs scan)
-initScheduler();
+// Initialize Background Scheduler and Start Express Server after Database is connected
+const startServer = async () => {
+  try {
+    await connectDB();
+    
+    // Initialize Background Scheduler (expired jobs scan)
+    initScheduler();
 
-// Start Express Server
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  logger.info(`Server running on PORT ${PORT}`);
-  console.log(`Server running on PORT ${PORT}`);
-});
+    const PORT = process.env.PORT || 5000;
+    app.listen(PORT, () => {
+      logger.info(`Server running on PORT ${PORT}`);
+      console.log(`Server running on PORT ${PORT}`);
+    });
+  } catch (err) {
+    logger.error(`Server startup failed: ${err.message}`);
+    console.error(`❌ Server startup failed: ${err.message}`);
+    process.exit(1);
+  }
+};
+
+startServer();
 
 module.exports = app;
