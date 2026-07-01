@@ -1,4 +1,5 @@
 require('dotenv').config();
+const path = require('path');
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
@@ -22,7 +23,7 @@ const jobRoutes = require('./routes/jobRoutes');
 const app = express();
 
 // Security Middlewares
-app.use(helmet());
+app.use(helmet({ contentSecurityPolicy: false }));
 app.use(cors());
 
 // Logging Middleware
@@ -69,6 +70,17 @@ app.use('/api/employer', employerRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/notifications', notificationRoutes);
 app.use('/api/jobs', jobRoutes);
+
+// Serve static frontend build assets
+app.use(express.static(path.join(__dirname, '../client/dist')));
+
+// Serve index.html for all other routes to support React Router client-side routing
+app.use((req, res, next) => {
+  if (req.method === 'GET' && !req.originalUrl.startsWith('/api') && !req.originalUrl.startsWith('/api-docs')) {
+    return res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+  }
+  next();
+});
 
 // 404 Route handler
 app.use((req, res, next) => {
