@@ -257,7 +257,7 @@ const Jobs = () => {
             </div>
           ) : jobs.length === 0 ? (
             <div className="bg-white dark:bg-slate-800 border border-slate-200/60 dark:border-slate-700/60 rounded-2xl p-12 text-center shadow-sm">
-              <p className="text-base font-bold text-slate-850 dark:text-slate-250">No jobs match your search</p>
+              <p className="text-base font-bold text-slate-800 dark:text-slate-250">No jobs match your search</p>
               <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 max-w-sm mx-auto">
                 Try adjusting your filters or clearing search keywords to find open job postings.
               </p>
@@ -317,7 +317,7 @@ const Jobs = () => {
 
                       {/* Location & Remote & Employment Type badges */}
                       <div className="flex flex-wrap gap-1">
-                        <span className="px-2 py-0.5 bg-slate-100 dark:bg-slate-750 text-slate-655 dark:text-slate-350 text-[10px] font-semibold rounded flex items-center gap-0.5">
+                        <span className="px-2 py-0.5 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-[10px] font-semibold rounded flex items-center gap-0.5">
                           <Briefcase size={10} /> {job.employmentType}
                         </span>
                         {job.jobType === 'Remote' && (
@@ -327,7 +327,7 @@ const Jobs = () => {
                         )}
                       </div>
 
-                      <p className="text-xs text-slate-600 dark:text-slate-350 line-clamp-2 leading-relaxed pt-1">
+                      <p className="text-xs text-slate-600 dark:text-slate-300 line-clamp-2 leading-relaxed pt-1">
                         {job.description?.replace(/<[^>]*>/g, '') /* strip html for description preview */}
                       </p>
 
@@ -337,7 +337,7 @@ const Jobs = () => {
                           {job.skillsRequired.slice(0, 3).map((tag) => (
                             <span
                               key={tag}
-                              className="px-2 py-0.5 bg-slate-50 dark:bg-slate-900 border border-slate-150 dark:border-slate-750 text-[9px] text-slate-500 dark:text-slate-400 rounded-md font-medium"
+                              className="px-2 py-0.5 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-[9px] text-slate-500 dark:text-slate-400 rounded-md font-medium"
                             >
                               {tag}
                             </span>

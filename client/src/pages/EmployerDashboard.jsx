@@ -255,13 +255,13 @@ const EmployerDashboard = () => {
                   <th className="px-6 py-3 text-right">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-100 dark:divide-slate-750">
+              <tbody className="divide-y divide-slate-100 dark:divide-slate-700">
                 {jobs.map((job) => (
-                  <tr key={job._id} className="hover:bg-slate-50/50 dark:hover:bg-slate-850/50">
+                  <tr key={job._id} className="hover:bg-slate-50/50 dark:hover:bg-slate-800/50">
                     <td className="px-6 py-4">
                       <div>
                         <p className="font-bold text-slate-950 dark:text-white">{job.title}</p>
-                        <p className="text-xs text-slate-450 mt-0.5">{job.category} &bull; {job.employmentType}</p>
+                        <p className="text-xs text-slate-400 mt-0.5">{job.category} &bull; {job.employmentType}</p>
                       </div>
                     </td>
                     <td className="px-6 py-4 text-xs font-medium">{job.location}</td>
@@ -493,15 +493,15 @@ const EmployerDashboard = () => {
                           onError={(e) => {
                             e.target.src = 'https://api.dicebear.com/7.x/initials/svg?seed=' + app.candidateId?.name;
                           }}
-                          className="h-10 w-10 rounded-full object-cover border border-slate-250"
+                          className="h-10 w-10 rounded-full object-cover border border-slate-200"
                         />
                         <div>
-                          <h4 className="text-sm font-bold text-slate-850 dark:text-slate-200">{app.candidateId?.name}</h4>
+                          <h4 className="text-sm font-bold text-slate-800 dark:text-slate-200">{app.candidateId?.name}</h4>
                           <p className="text-xs text-slate-500">{app.candidateId?.email}</p>
                         </div>
                       </div>
                       {app.coverLetter && (
-                        <p className="text-xs text-slate-600 dark:text-slate-350 leading-relaxed italic bg-white dark:bg-slate-800 p-3 rounded-lg border border-slate-100 dark:border-slate-750">
+                        <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed italic bg-white dark:bg-slate-800 p-3 rounded-lg border border-slate-100 dark:border-slate-700">
                           "{app.coverLetter}"
                         </p>
                       )}
@@ -511,7 +511,7 @@ const EmployerDashboard = () => {
                       {app.resumeId && (
                         <button
                           onClick={() => handleDownloadResume(app.resumeId._id, app.candidateId?.name)}
-                          className="text-xs font-bold text-blue-600 hover:text-blue-500 flex items-center gap-1 bg-white dark:bg-slate-850 border border-slate-200 dark:border-slate-750 px-3 py-1.5 rounded-lg"
+                          className="text-xs font-bold text-blue-600 hover:text-blue-500 flex items-center gap-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-3 py-1.5 rounded-lg"
                         >
                           <FileText size={14} /> Download CV
                         </button>
@@ -519,7 +519,7 @@ const EmployerDashboard = () => {
                       <select
                         value={app.status}
                         onChange={(e) => updateApplicantStatus(app._id, e.target.value)}
-                        className="bg-white dark:bg-slate-850 border border-slate-200 dark:border-slate-750 rounded-lg p-1.5 text-xs outline-none font-semibold text-slate-700 dark:text-slate-300"
+                        className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg p-1.5 text-xs outline-none font-semibold text-slate-700 dark:text-slate-300"
                       >
                         <option value="Applied">Applied</option>
                         <option value="Under Review">Under Review</option>

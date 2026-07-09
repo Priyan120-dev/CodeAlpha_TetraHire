@@ -111,7 +111,7 @@ const Login = () => {
             Connect. Recite. <br />
             <span className="text-[#00BE9B]">Deploy Your Future.</span>
           </h2>
-          <p className="text-slate-350 text-base leading-relaxed">
+          <p className="text-slate-300 text-base leading-relaxed">
             The next-generation hiring engine. Manage jobs, review portfolios, and coordinate workflows in an elegant, lightning-fast dashboard system.
           </p>
         </div>
@@ -214,7 +214,7 @@ const Login = () => {
               <button
                 type="button"
                 onClick={() => handleQuickLogin('candidate')}
-                className="py-2.5 px-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold hover:border-[#00BE9B] hover:bg-[#00BE9B]/5 text-slate-700 dark:text-slate-350 transition-all flex flex-col items-center gap-1 cursor-pointer"
+                className="py-2.5 px-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold hover:border-[#00BE9B] hover:bg-[#00BE9B]/5 text-slate-700 dark:text-slate-300 transition-all flex flex-col items-center gap-1 cursor-pointer"
               >
                 <User size={14} className="text-[#00BE9B]" />
                 Candidate
@@ -222,7 +222,7 @@ const Login = () => {
               <button
                 type="button"
                 onClick={() => handleQuickLogin('employer')}
-                className="py-2.5 px-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold hover:border-[#00BE9B] hover:bg-[#00BE9B]/5 text-slate-700 dark:text-slate-350 transition-all flex flex-col items-center gap-1 cursor-pointer"
+                className="py-2.5 px-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold hover:border-[#00BE9B] hover:bg-[#00BE9B]/5 text-slate-700 dark:text-slate-300 transition-all flex flex-col items-center gap-1 cursor-pointer"
               >
                 <Briefcase size={14} className="text-[#00BE9B]" />
                 Employer
@@ -230,7 +230,7 @@ const Login = () => {
               <button
                 type="button"
                 onClick={() => handleQuickLogin('admin')}
-                className="py-2.5 px-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold hover:border-red-400 hover:bg-red-500/5 text-slate-700 dark:text-slate-350 transition-all flex flex-col items-center gap-1 cursor-pointer"
+                className="py-2.5 px-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-semibold hover:border-red-400 hover:bg-red-500/5 text-slate-700 dark:text-slate-300 transition-all flex flex-col items-center gap-1 cursor-pointer"
               >
                 <ShieldCheck size={14} className="text-red-400" />
                 Admin

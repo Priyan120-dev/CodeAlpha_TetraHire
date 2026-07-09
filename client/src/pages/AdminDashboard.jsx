@@ -139,23 +139,23 @@ const AdminDashboard = () => {
         </div>
         <div className="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200/60 dark:border-slate-700/60 shadow-sm text-center">
           <p className="text-xl font-bold text-blue-600">{stats.totalCandidates}</p>
-          <p className="text-[9px] font-bold text-slate-450 uppercase tracking-wider">Candidates</p>
+          <p className="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Candidates</p>
         </div>
         <div className="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200/60 dark:border-slate-700/60 shadow-sm text-center">
           <p className="text-xl font-bold text-indigo-600">{stats.totalEmployers}</p>
-          <p className="text-[9px] font-bold text-slate-450 uppercase tracking-wider">Employers</p>
+          <p className="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Employers</p>
         </div>
         <div className="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200/60 dark:border-slate-700/60 shadow-sm text-center">
           <p className="text-xl font-bold text-emerald-600">{stats.totalJobs}</p>
-          <p className="text-[9px] font-bold text-slate-450 uppercase tracking-wider">Jobs Posted</p>
+          <p className="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Jobs Posted</p>
         </div>
         <div className="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200/60 dark:border-slate-700/60 shadow-sm text-center">
           <p className="text-xl font-bold text-sky-600">{stats.totalApplications}</p>
-          <p className="text-[9px] font-bold text-slate-450 uppercase tracking-wider">Applications</p>
+          <p className="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Applications</p>
         </div>
         <div className="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200/60 dark:border-slate-700/60 shadow-sm text-center">
           <p className="text-xl font-bold text-red-500 animate-pulse">{stats.pendingVerifications}</p>
-          <p className="text-[9px] font-bold text-slate-455 uppercase tracking-wider">Pending Verification</p>
+          <p className="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Pending Verification</p>
         </div>
       </div>
 

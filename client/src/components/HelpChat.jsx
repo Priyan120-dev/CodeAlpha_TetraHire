@@ -32,7 +32,7 @@ const HelpChat = () => {
             </div>
             <button
               onClick={() => setIsOpen(false)}
-              className="text-slate-450 hover:text-slate-600 dark:hover:text-slate-200 p-1"
+              className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 p-1"
             >
               <X size={16} />
             </button>
@@ -42,7 +42,7 @@ const HelpChat = () => {
             <p className="font-semibold text-slate-500">Frequently Asked Questions:</p>
             {faqs.map((faq, idx) => (
               <div key={idx} className="bg-slate-50 dark:bg-slate-900/60 p-2.5 rounded-xl border border-slate-100 dark:border-slate-900">
-                <span className="block font-bold text-slate-700 dark:text-slate-350">Q: {faq.q}</span>
+                <span className="block font-bold text-slate-700 dark:text-slate-300">Q: {faq.q}</span>
                 <span className="block mt-1 text-slate-500 dark:text-slate-400">A: {faq.a}</span>
               </div>
             ))}

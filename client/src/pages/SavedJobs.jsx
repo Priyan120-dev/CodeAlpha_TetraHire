@@ -59,7 +59,7 @@ const SavedJobs = () => {
 
       {savedItems.length === 0 ? (
         <div className="bg-white dark:bg-slate-800 border border-slate-200/60 dark:border-slate-700/60 p-12 text-center rounded-2xl shadow-sm">
-          <p className="text-base font-bold text-slate-850 dark:text-slate-200">No saved jobs</p>
+          <p className="text-base font-bold text-slate-800 dark:text-slate-200">No saved jobs</p>
           <p className="text-xs text-slate-500 mt-1 max-w-xs mx-auto">
             Browse open positions on the job board and bookmark roles you are interested in.
           </p>
@@ -92,7 +92,7 @@ const SavedJobs = () => {
                         <h3 className="text-sm font-bold text-slate-900 dark:text-white truncate" title={job.title}>
                           {job.title}
                         </h3>
-                        <p className="text-[11px] text-slate-550 dark:text-slate-400 truncate flex items-center gap-0.5 mt-0.5">
+                        <p className="text-[11px] text-slate-500 dark:text-slate-400 truncate flex items-center gap-0.5 mt-0.5">
                           <Building size={10} /> {job.companyName}
                         </p>
                         
@@ -110,20 +110,20 @@ const SavedJobs = () => {
                     </div>
                     <button
                       onClick={() => handleRemove(job._id)}
-                      className="text-slate-450 hover:text-rose-600 transition-colors p-1 shrink-0"
+                      className="text-slate-400 hover:text-rose-600 transition-colors p-1 shrink-0"
                       title="Remove Bookmark"
                     >
                       <Trash2 size={16} />
                     </button>
                   </div>
                   <p 
-                    className="text-xs text-slate-655 dark:text-slate-350 line-clamp-2 leading-relaxed"
+                    className="text-xs text-slate-600 dark:text-slate-300 line-clamp-2 leading-relaxed"
                     dangerouslySetInnerHTML={{ __html: job.description?.replace(/<[^>]*>/g, '') }}
                   ></p>
                 </div>
 
                 <div className="border-t border-slate-100 dark:border-slate-700/60 mt-4 pt-4 flex justify-between items-center text-xs">
-                  <span className="text-slate-550 flex items-center gap-1 min-w-0">
+                  <span className="text-slate-500 flex items-center gap-1 min-w-0">
                     <MapPin size={12} className="shrink-0" /> 
                     <span className="truncate">{job.location}</span>
                   </span>

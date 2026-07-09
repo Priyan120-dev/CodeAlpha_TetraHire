@@ -49,7 +49,7 @@ const CompanyDetails = () => {
   if (!company) {
     return (
       <div className="max-w-md mx-auto text-center py-20 space-y-4">
-        <h2 className="text-xl font-bold text-slate-855 dark:text-white">Company Profile Not Found</h2>
+        <h2 className="text-xl font-bold text-slate-800 dark:text-white">Company Profile Not Found</h2>
         <p className="text-xs text-slate-500">The requested employer profile does not exist or has been disabled.</p>
         <Link to="/jobs" className="inline-block bg-blue-600 text-white text-xs font-semibold px-5 py-2.5 rounded-lg">
           Back to Listings
@@ -69,7 +69,7 @@ const CompanyDetails = () => {
             onError={(e) => {
               e.target.src = 'https://api.dicebear.com/7.x/initials/svg?seed=' + company.companyName;
             }}
-            className="h-16 w-16 rounded-2xl object-cover border border-slate-150 shadow-sm"
+            className="h-16 w-16 rounded-2xl object-cover border border-slate-200 shadow-sm"
           />
           <div className="space-y-1">
             <h1 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white">{company.companyName}</h1>
@@ -98,7 +98,7 @@ const CompanyDetails = () => {
         <div className="lg:col-span-2 space-y-6">
           <div className="bg-white dark:bg-slate-800 border border-slate-200/60 dark:border-slate-700/60 p-6 md:p-8 rounded-2xl shadow-sm space-y-4">
             <h3 className="text-base font-bold text-slate-900 dark:text-white">About the Company</h3>
-            <p className="text-sm text-slate-650 dark:text-slate-300 leading-relaxed whitespace-pre-line">
+            <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed whitespace-pre-line">
               {company.description || 'No detailed biography provided for this company.'}
             </p>
           </div>
@@ -115,11 +115,11 @@ const CompanyDetails = () => {
                 <Link
                   key={job._id}
                   to={`/jobs/${job._id}`}
-                  className="block p-3 rounded-lg border border-slate-100 dark:border-slate-750 hover:bg-slate-50 dark:hover:bg-slate-850 transition-colors"
+                  className="block p-3 rounded-lg border border-slate-100 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-850 transition-colors"
                 >
                   <div className="flex justify-between items-start gap-2">
                     <div>
-                      <h4 className="text-xs font-bold text-slate-850 dark:text-slate-200 truncate max-w-[160px]">{job.title}</h4>
+                      <h4 className="text-xs font-bold text-slate-800 dark:text-slate-200 truncate max-w-[160px]">{job.title}</h4>
                       <p className="text-[10px] text-slate-500 mt-0.5">{job.jobType} &bull; {job.location}</p>
                     </div>
                     <ChevronRight size={14} className="text-slate-400 mt-1 shrink-0" />

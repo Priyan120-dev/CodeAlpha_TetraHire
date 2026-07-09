@@ -208,7 +208,7 @@ const CandidateProfile = () => {
               className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all ${
                 activeSection === sec.id
                   ? 'bg-blue-50 text-blue-600 dark:bg-blue-950/40 dark:text-blue-400'
-                  : 'text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-850'
+                  : 'text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800'
               }`}
             >
               <sec.icon size={16} /> {sec.label}
@@ -228,7 +228,7 @@ const CandidateProfile = () => {
                   <img
                     src={profileImage || 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150'}
                     alt="Profile Preview"
-                    className="h-24 w-24 rounded-full object-cover border-4 border-white dark:border-slate-850 shadow-md ring-2 ring-[#00BE9B]/20"
+                    className="h-24 w-24 rounded-full object-cover border-4 border-white dark:border-slate-800 shadow-md ring-2 ring-[#00BE9B]/20"
                   />
                   <label className="absolute inset-0 flex items-center justify-center bg-black/40 rounded-full opacity-0 group-hover:opacity-100 cursor-pointer transition-opacity duration-200">
                     <Upload size={18} className="text-white" />
@@ -241,7 +241,7 @@ const CandidateProfile = () => {
                   </label>
                 </div>
                 <div className="text-center sm:text-left space-y-1.5">
-                  <h3 className="text-sm font-bold text-slate-850 dark:text-slate-200">Profile Image</h3>
+                  <h3 className="text-sm font-bold text-slate-800 dark:text-slate-200">Profile Image</h3>
                   <p className="text-[11px] text-slate-400 max-w-[280px]">Upload a professional JPG or PNG. Image will be saved to your profile.</p>
                   <div className="flex gap-2 justify-center sm:justify-start">
                     <label className="text-xs font-semibold text-[#00BE9B] hover:text-[#00BE9B]/90 bg-[#00BE9B]/10 hover:bg-[#00BE9B]/20 px-3 py-1.5 rounded-lg cursor-pointer transition-all">
@@ -257,7 +257,7 @@ const CandidateProfile = () => {
                       <button
                         type="button"
                         onClick={() => setProfileImage('')}
-                        className="text-xs font-semibold text-red-500 hover:text-red-655 bg-red-50 dark:bg-red-950/20 px-3 py-1.5 rounded-lg transition-all"
+                        className="text-xs font-semibold text-red-500 hover:text-red-600 bg-red-50 dark:bg-red-950/20 px-3 py-1.5 rounded-lg transition-all"
                       >
                         Remove
                       </button>
@@ -268,9 +268,9 @@ const CandidateProfile = () => {
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-slate-550 dark:text-slate-400">Full Name</label>
+                  <label className="text-xs font-bold text-slate-500 dark:text-slate-400">Full Name</label>
                   <div className="relative">
-                    <User size={15} className="absolute left-3 top-3 text-slate-450" />
+                    <User size={15} className="absolute left-3 top-3 text-slate-400" />
                     <input
                       type="text"
                       required
@@ -283,9 +283,9 @@ const CandidateProfile = () => {
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-slate-550 dark:text-slate-400">Phone Number</label>
+                  <label className="text-xs font-bold text-slate-500 dark:text-slate-400">Phone Number</label>
                   <div className="relative">
-                    <Phone size={15} className="absolute left-3 top-3 text-slate-450" />
+                    <Phone size={15} className="absolute left-3 top-3 text-slate-400" />
                     <input
                       type="tel"
                       placeholder="+1 (555) 123-4567"
@@ -299,9 +299,9 @@ const CandidateProfile = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-slate-550 dark:text-slate-400">Location</label>
+                  <label className="text-xs font-bold text-slate-500 dark:text-slate-400">Location</label>
                   <div className="relative">
-                    <MapPin size={15} className="absolute left-3 top-3 text-slate-450" />
+                    <MapPin size={15} className="absolute left-3 top-3 text-slate-400" />
                     <input
                       type="text"
                       placeholder="e.g. Remote / Boston, MA"
@@ -313,9 +313,9 @@ const CandidateProfile = () => {
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-slate-550 dark:text-slate-400">Key Skills (Comma separated)</label>
+                  <label className="text-xs font-bold text-slate-500 dark:text-slate-400">Key Skills (Comma separated)</label>
                   <div className="relative">
-                    <Award size={15} className="absolute left-3 top-3 text-slate-450" />
+                    <Award size={15} className="absolute left-3 top-3 text-slate-400" />
                     <input
                       type="text"
                       placeholder="React, Tailwind CSS, Node.js"
@@ -328,7 +328,7 @@ const CandidateProfile = () => {
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-xs font-bold text-slate-550 dark:text-slate-400">Biography / Summary</label>
+                <label className="text-xs font-bold text-slate-500 dark:text-slate-400">Biography / Summary</label>
                 <textarea
                   rows={4}
                   placeholder="Tell employers about your professional history, targets, and expertise..."
@@ -341,7 +341,7 @@ const CandidateProfile = () => {
               {/* Social profiles row */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
                 <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-slate-550 dark:text-slate-400">LinkedIn Profile URL</label>
+                  <label className="text-xs font-bold text-slate-500 dark:text-slate-400">LinkedIn Profile URL</label>
                   <div className="relative">
                     <LinkedInIcon size={15} className="absolute left-3 top-3 text-[#0a66c2]" />
                     <input
@@ -355,7 +355,7 @@ const CandidateProfile = () => {
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-slate-550 dark:text-slate-400">GitHub Profile URL</label>
+                  <label className="text-xs font-bold text-slate-500 dark:text-slate-400">GitHub Profile URL</label>
                   <div className="relative">
                     <GitHubIcon size={15} className="absolute left-3 top-3 text-slate-800 dark:text-slate-200" />
                     <input
@@ -391,7 +391,7 @@ const CandidateProfile = () => {
                     <Upload size={18} />
                   </div>
                   <div>
-                    <h4 className="text-xs font-bold text-slate-850 dark:text-slate-200">Upload New Resume</h4>
+                    <h4 className="text-xs font-bold text-slate-800 dark:text-slate-200">Upload New Resume</h4>
                     <p className="text-[10px] text-slate-400">PDF formats only, Max 5MB file size</p>
                   </div>
                 </div>
@@ -427,7 +427,7 @@ const CandidateProfile = () => {
                       >
                         <div className="flex items-center gap-2">
                           <FileText size={15} className="text-blue-500" />
-                          <span className="font-semibold text-slate-850 dark:text-slate-250 truncate max-w-[200px]">{res.fileName}</span>
+                          <span className="font-semibold text-slate-800 dark:text-slate-255 truncate max-w-[200px]">{res.fileName}</span>
                           <span className="text-[9px] text-slate-400">({new Date(res.uploadedAt).toLocaleDateString()})</span>
                         </div>
                         <button
@@ -449,7 +449,7 @@ const CandidateProfile = () => {
               <h2 className="text-xl font-bold text-slate-900 dark:text-white">Change Password</h2>
 
               <div className="space-y-1.5 max-w-sm">
-                <label className="text-xs font-bold text-slate-550 dark:text-slate-400">Current Password</label>
+                <label className="text-xs font-bold text-slate-500 dark:text-slate-400">Current Password</label>
                 <input
                   type="password"
                   required
@@ -461,7 +461,7 @@ const CandidateProfile = () => {
               </div>
 
               <div className="space-y-1.5 max-w-sm">
-                <label className="text-xs font-bold text-slate-550 dark:text-slate-400">New Password</label>
+                <label className="text-xs font-bold text-slate-500 dark:text-slate-400">New Password</label>
                 <input
                   type="password"
                   required

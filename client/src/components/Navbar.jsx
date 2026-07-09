@@ -265,7 +265,7 @@ const Navbar = () => {
                 className={`px-4 py-3 rounded-xl text-sm font-medium transition-all ${
                   isActive(link.path)
                     ? 'bg-blue-50 text-blue-600 dark:bg-blue-950/30 dark:text-blue-400 font-semibold shadow-sm'
-                    : 'text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800'
+                    : 'text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800'
                 }`}
               >
                 {link.name}
@@ -273,7 +273,7 @@ const Navbar = () => {
             ))}
           </div>
 
-          <div className="border-t border-slate-150 dark:border-slate-800 pt-4 mt-auto">
+          <div className="border-t border-slate-200 dark:border-slate-800 pt-4 mt-auto">
             {user ? (
               <div className="space-y-4">
                 <div className="flex items-center gap-3 px-3">
@@ -298,14 +298,14 @@ const Navbar = () => {
                         : '/candidate/dashboard'
                     }
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm text-slate-750 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+                    className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
                   >
                     <LayoutDashboard size={16} /> Dashboard
                   </Link>
                   <Link
                     to={user.role === 'employer' ? '/employer/profile' : '/candidate/profile'}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm text-slate-750 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+                    className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
                   >
                     <User size={16} /> Edit Profile
                   </Link>
@@ -322,7 +322,7 @@ const Navbar = () => {
                 <Link
                   to="/login"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="flex justify-center items-center rounded-xl border border-slate-250 dark:border-slate-700 py-3 text-sm font-semibold text-slate-700 dark:text-slate-305 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all min-h-[48px]"
+                  className="flex justify-center items-center rounded-xl border border-slate-200 dark:border-slate-700 py-3 text-sm font-semibold text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all min-h-[48px]"
                 >
                   Sign In
                 </Link>

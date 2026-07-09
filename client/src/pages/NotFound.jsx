@@ -15,7 +15,7 @@ const NotFound = () => {
       <div className="flex flex-col sm:flex-row gap-4">
         <button
           onClick={() => window.history.back()}
-          className="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-750 dark:text-slate-200 px-6 py-2.5 text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-700/50 flex items-center justify-center gap-2 active:scale-97 transition-all"
+          className="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 px-6 py-2.5 text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-700/50 flex items-center justify-center gap-2 active:scale-97 transition-all"
         >
           <ArrowLeft size={16} /> Go Back
         </button>

@@ -120,7 +120,7 @@ const EmployerProfile = () => {
               className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all ${
                 activeSection === sec.id
                   ? 'bg-blue-50 text-blue-600 dark:bg-blue-950/40 dark:text-blue-400'
-                  : 'text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-850'
+                  : 'text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800'
               }`}
             >
               <sec.icon size={16} /> {sec.label}
@@ -136,9 +136,9 @@ const EmployerProfile = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-slate-550 dark:text-slate-400">Company Name</label>
+                  <label className="text-xs font-bold text-slate-500 dark:text-slate-400">Company Name</label>
                   <div className="relative">
-                    <Building size={15} className="absolute left-3 top-3 text-slate-450" />
+                    <Building size={15} className="absolute left-3 top-3 text-slate-400" />
                     <input
                       type="text"
                       required
@@ -151,9 +151,9 @@ const EmployerProfile = () => {
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-slate-550 dark:text-slate-400">Website URL</label>
+                  <label className="text-xs font-bold text-slate-500 dark:text-slate-400">Website URL</label>
                   <div className="relative">
-                    <Globe size={15} className="absolute left-3 top-3 text-slate-450" />
+                    <Globe size={15} className="absolute left-3 top-3 text-slate-400" />
                     <input
                       type="url"
                       placeholder="https://acme.com"
@@ -167,7 +167,7 @@ const EmployerProfile = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-slate-550 dark:text-slate-400">Location (City, Country)</label>
+                  <label className="text-xs font-bold text-slate-500 dark:text-slate-400">Location (City, Country)</label>
                   <input
                     type="text"
                     placeholder="Boston, MA"
@@ -178,7 +178,7 @@ const EmployerProfile = () => {
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-slate-550 dark:text-slate-400">Company Size</label>
+                  <label className="text-xs font-bold text-slate-500 dark:text-slate-400">Company Size</label>
                   <select
                     value={companySize}
                     onChange={(e) => setCompanySize(e.target.value)}
@@ -193,7 +193,7 @@ const EmployerProfile = () => {
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-slate-550 dark:text-slate-400">Industry Sector</label>
+                  <label className="text-xs font-bold text-slate-500 dark:text-slate-400">Industry Sector</label>
                   <input
                     type="text"
                     placeholder="Software, Finance, Biotech..."
@@ -205,7 +205,7 @@ const EmployerProfile = () => {
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-xs font-bold text-slate-550 dark:text-slate-400">Company Bio / Description</label>
+                <label className="text-xs font-bold text-slate-500 dark:text-slate-400">Company Bio / Description</label>
                 <textarea
                   rows={5}
                   placeholder="Explain what your company does, your products, your vision..."
@@ -238,7 +238,7 @@ const EmployerProfile = () => {
                     className="h-16 w-16 rounded-xl object-cover border"
                   />
                   <div>
-                    <h4 className="text-xs font-bold text-slate-850 dark:text-slate-250">Active Brand Logo</h4>
+                    <h4 className="text-xs font-bold text-slate-800 dark:text-slate-255">Active Brand Logo</h4>
                     <p className="text-[10px] text-slate-400">This is shown publicly on job boards</p>
                   </div>
                 </div>
@@ -268,7 +268,7 @@ const EmployerProfile = () => {
               <h2 className="text-xl font-bold text-slate-900 dark:text-white">Change Password</h2>
 
               <div className="space-y-1.5 max-w-sm">
-                <label className="text-xs font-bold text-slate-550 dark:text-slate-400">Current Password</label>
+                <label className="text-xs font-bold text-slate-500 dark:text-slate-400">Current Password</label>
                 <input
                   type="password"
                   required
@@ -280,7 +280,7 @@ const EmployerProfile = () => {
               </div>
 
               <div className="space-y-1.5 max-w-sm">
-                <label className="text-xs font-bold text-slate-550 dark:text-slate-400">New Password</label>
+                <label className="text-xs font-bold text-slate-500 dark:text-slate-400">New Password</label>
                 <input
                   type="password"
                   required

@@ -58,7 +58,7 @@ const Notifications = () => {
           <div className="h-12 w-12 rounded-full bg-slate-50 dark:bg-slate-900 text-slate-400 flex items-center justify-center mx-auto mb-4">
             <BellOff size={24} />
           </div>
-          <p className="text-sm font-bold text-slate-850 dark:text-slate-200">Your inbox is empty</p>
+          <p className="text-sm font-bold text-slate-800 dark:text-slate-200">Your inbox is empty</p>
           <p className="text-xs text-slate-500 mt-1 max-w-xs mx-auto">
             You'll receive automatic alerts here when recruiters update your application pipeline status.
           </p>

@@ -254,7 +254,7 @@ const JobDetails = () => {
             <div className="space-y-4">
               <h3 className="text-base font-bold text-slate-900 dark:text-white">Job Description</h3>
               <p 
-                className="text-sm text-slate-655 dark:text-slate-350 leading-relaxed whitespace-pre-line"
+                className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed whitespace-pre-line"
                 dangerouslySetInnerHTML={{ __html: job.description }}
               ></p>
             </div>
@@ -293,7 +293,7 @@ const JobDetails = () => {
                   href={job.applyUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full bg-purple-650 hover:bg-purple-700 text-white font-semibold text-xs py-3 rounded-lg flex items-center justify-center gap-1.5 shadow-md active:scale-97 transition-all"
+                  className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold text-xs py-3 rounded-lg flex items-center justify-center gap-1.5 shadow-md active:scale-97 transition-all"
                 >
                   Apply on Official Site <ArrowUpRight size={14} />
                 </a>
@@ -315,7 +315,7 @@ const JobDetails = () => {
                   </p>
                 </div>
               ) : hasApplied ? (
-                <div className="p-4 bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-250 dark:border-emerald-900 rounded-xl text-center flex flex-col items-center gap-2">
+                <div className="p-4 bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900 rounded-xl text-center flex flex-col items-center gap-2">
                   <CheckCircle className="text-emerald-500" size={24} />
                   <p className="text-xs font-semibold text-emerald-800 dark:text-emerald-300">Already Applied</p>
                   <p className="text-[11px] text-slate-500">You can track your application status in the dashboard.</p>
@@ -367,7 +367,7 @@ const JobDetails = () => {
                           placeholder="Why do you think you are a fit for this position..."
                           value={coverLetter}
                           onChange={(e) => setCoverLetter(e.target.value)}
-                          className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg p-2.5 text-xs outline-none focus:border-blue-500 text-slate-850 dark:text-slate-250"
+                          className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg p-2.5 text-xs outline-none focus:border-blue-500 text-slate-800 dark:text-slate-250"
                         ></textarea>
                       </div>
 
@@ -430,7 +430,7 @@ const JobDetails = () => {
             ) : (
               <>
                 {job.companyDescription && (
-                  <p className="text-xs text-slate-655 dark:text-slate-350 leading-relaxed line-clamp-4 mt-2">
+                  <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed line-clamp-4 mt-2">
                     {job.companyDescription}
                   </p>
                 )}

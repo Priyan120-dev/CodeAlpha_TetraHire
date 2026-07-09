@@ -86,7 +86,7 @@ const Register = () => {
             Launch Your Journey <br />
             <span className="text-[#00BE9B]">With TetraHire.</span>
           </h2>
-          <p className="text-slate-350 text-base leading-relaxed">
+          <p className="text-slate-300 text-base leading-relaxed">
             Create an account to gain instant access to thousands of listings, direct application management tools, and recruiter verification features.
           </p>
         </div>

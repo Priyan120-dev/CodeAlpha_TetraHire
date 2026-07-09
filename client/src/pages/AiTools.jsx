@@ -481,11 +481,11 @@ ${resumeData.name || 'Professional Candidate'}`;
                   </div>
 
                   {/* Right: Live Preview */}
-                  <div className="flex-1 bg-slate-50 dark:bg-slate-950 p-5 rounded-xl border border-slate-250 dark:border-slate-850 flex flex-col justify-between">
+                  <div className="flex-1 bg-slate-50 dark:bg-slate-950 p-5 rounded-xl border border-slate-200 dark:border-slate-800 flex flex-col justify-between">
                     <div>
                       <div className="border-b border-slate-200 dark:border-slate-800 pb-3 text-center">
-                        <h2 className="text-md font-extrabold text-slate-805 dark:text-white uppercase tracking-widest">{resumeData.name || 'Your Name'}</h2>
-                        <p className="text-[10px] text-slate-550 mt-1">{resumeData.email || 'your.email@example.com'}</p>
+                        <h2 className="text-md font-extrabold text-slate-800 dark:text-white uppercase tracking-widest">{resumeData.name || 'Your Name'}</h2>
+                        <p className="text-[10px] text-slate-500 mt-1">{resumeData.email || 'your.email@example.com'}</p>
                       </div>
 
                       <div className="space-y-3 pt-3">
@@ -780,7 +780,7 @@ ${resumeData.name || 'Professional Candidate'}`;
                         <div className="space-y-4">
                           <div className="p-5 border border-emerald-500/20 bg-emerald-500/5 rounded-xl text-center space-y-2">
                             <CheckCircle size={32} className="mx-auto text-emerald-500" />
-                            <h4 className="text-md font-bold text-slate-905 dark:text-white">Session Completed!</h4>
+                            <h4 className="text-md font-bold text-slate-900 dark:text-white">Session Completed!</h4>
                             <p className="text-xs text-slate-500">Your average score is:</p>
                             <p className="text-4xl font-black text-[#00BE9B]">{interviewScore} / 10</p>
                           </div>
@@ -797,7 +797,7 @@ ${resumeData.name || 'Professional Candidate'}`;
 
                           <button
                             onClick={() => setInterviewStarted(false)}
-                            className="w-full bg-slate-150 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-white py-2 rounded-xl text-xs font-bold"
+                            className="w-full bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-white py-2 rounded-xl text-xs font-bold"
                           >
                             Start New Session
                           </button>
